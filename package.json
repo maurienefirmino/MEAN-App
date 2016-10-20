@@ -1,0 +1,18 @@
+{
+  "name": "aplicativo-n2",
+  "version": "1.0.0",
+  "description": "Aplicativo para consumir um WebService",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "font-awesome": "^4.6.3",
+    "node-materialize": "^1.1.1"
+  }
+}

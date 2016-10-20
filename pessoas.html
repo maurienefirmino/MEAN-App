@@ -1,0 +1,33 @@
+
+<h3 class="center-align">Pessoas Cadastradas</h3>
+<div class="right-align">
+	<a href="#/cadastro">
+		<button class="btn blue" title="Novo Registro"><i class="fa fa-plus"></i></button>
+	</a>
+</div>
+<table class="striped">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Telefone</th>
+			<th>Email</th>
+			<th>Idade</th>
+			<th>Cidade</th>
+			<th>Estado</th>
+			<th>Opções</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="d in P.dados">
+			<td>{{ d.nome | uppercase }}</td>
+			<td>{{ d.telefone | uppercase }}</td>
+			<td>{{ d.email | uppercase }}</td>
+			<td>{{ d.idade | uppercase }}</td>
+			<td>{{ d.cidade | uppercase }}</td>
+			<td>{{ d.estado | uppercase }}</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
