@@ -1,0 +1,44 @@
+<h3 class="center-align">Edição de Pessoa</h3>
+
+<form>
+	<div class="row">
+		<div class="col s12">
+			<label>Nome:</label>
+			<input type="text" name="nome" ng-model="P.form.nome" id="name"/> 
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s4">
+			<label>Telefone:</label>
+			<input type="text" name="telefone" ng-model="P.form.telefone" />
+		</div>
+		<div class="col s8">
+			<label>Email:</label>
+			<input type="text" name="email" ng-model="P.form.email" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s1">
+			<label>Idade:</label>
+			<input type="text" name="idade" ng-model="P.form.idade" />
+		</div>
+		<div class="col s5">
+			<label>Cidade:</label>
+			<input type="text" name="cidade" ng-model="P.form.cidade" />
+		</div>
+		<div class="col s3">
+			<label>Estado:</label>
+			<input type="text" name="estado" ng-model="P.form.estado" />
+		</div>
+		<div class="col s3">
+			<label>Pais:</label>
+			<input type="text" name="pais" ng-model="P.form.pais" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 center-align">
+			<button class="btn blue" ng-click="">Salvar</button>
+			<a href="#/pessoas"><button class="btn red">Cancelar</button></a>
+		</div>
+	</div>
+</form>

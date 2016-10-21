@@ -9,23 +9,24 @@
 	<thead>
 		<tr>
 			<th>Nome</th>
-			<th>Telefone</th>
 			<th>Email</th>
-			<th>Idade</th>
-			<th>Cidade</th>
-			<th>Estado</th>
 			<th>Opções</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="d in P.dados">
-			<td>{{ d.nome | uppercase }}</td>
-			<td>{{ d.telefone | uppercase }}</td>
+			<td>
+			<a href="#pessoas/detalhes/{{$index}}">
+					{{ d.nome | uppercase }}
+				</a>
+			</td>
 			<td>{{ d.email | uppercase }}</td>
-			<td>{{ d.idade | uppercase }}</td>
-			<td>{{ d.cidade | uppercase }}</td>
-			<td>{{ d.estado | uppercase }}</td>
-			<td></td>
+			<td>
+				<a href="#/pessoas/editar/{{$index}}">
+					<button class="btn" title="Editar Registro" ng-click=""><i class="fa fa-edit"></i></button>
+				</a>
+				<button class="btn" title="Excluir Registro" ng-click="P.deleta(d._id)"><i class="fa fa-close"></i></button>
+			</td>
 		</tr>
 	</tbody>
 </table>
