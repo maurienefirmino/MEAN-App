@@ -21,7 +21,7 @@ angular.module('appPessoas', ['ngRoute']).config(['$routeProvider', function ($r
 	
 }]).controller('PessoasController',PessoasController);
 
-function PessoasController($http, $routeParams){
+function PessoasController($http, $routeParams,$location){
 	var vm = this;
 	vm.dados = [];
 	vm.routeParams = $routeParams;
@@ -35,7 +35,6 @@ function PessoasController($http, $routeParams){
 	});
 
 	vm.salva = function salva(form){
-		console.log(form);
 		$http({
 			method: 'post',
 			data: form,
@@ -43,14 +42,28 @@ function PessoasController($http, $routeParams){
 
 		}).then(function successCallback(res) {
 			alert('Salvo!');
+			$location.path('/pessoas');
 
 		}, function errorCallback(res) {
 			alert('ERRO!');
 		});
 	};
 
-	vm.edita = function edita($index){
+	vm.edita = function edita(form,id){
+		delete form._id;
+		console.log(form);
+		$http({
+			method: 'post',
+			data: form,
+			url: 'http://localhost:3000/pessoas/'+id,
 
+		}).then(function successCallback(res) {
+			alert('Atualizado!');
+			$location.path('/pessoas');
+
+		}, function errorCallback(res) {
+			alert('ERRO!');
+		});
 	}
 
 	vm.deleta = function deleta(id){
@@ -67,8 +80,6 @@ function PessoasController($http, $routeParams){
 			}, function errorCallback(res) {
 				console.log('Error');
 			});
-
-			console.log(vm.dados);
 
 			vm.dados = vm.dados.filter(function(el){return el._id !== id});
 

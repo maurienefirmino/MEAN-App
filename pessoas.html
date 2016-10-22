@@ -5,23 +5,28 @@
 		<button class="btn blue" title="Novo Registro"><i class="fa fa-plus"></i></button>
 	</a>
 </div>
+<div class="row">
+	<div class="col s6">
+		<input type="search" ng-model="filtroPessoa" placeholder="Pesquisar">
+	</div>
+</div>
 <table class="striped">
 	<thead>
 		<tr>
 			<th>Nome</th>
 			<th>Email</th>
-			<th>Opções</th>
+			<th class="right-align">Opções</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="d in P.dados">
+		<tr ng-repeat="d in P.dados | filter:filtroPessoa">
 			<td>
-			<a href="#pessoas/detalhes/{{$index}}">
+				<a href="#pessoas/detalhes/{{$index}}">
 					{{ d.nome | uppercase }}
 				</a>
 			</td>
 			<td>{{ d.email | uppercase }}</td>
-			<td>
+			<td class="right-align">
 				<a href="#/pessoas/editar/{{$index}}">
 					<button class="btn" title="Editar Registro" ng-click=""><i class="fa fa-edit"></i></button>
 				</a>
