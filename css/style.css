@@ -1,9 +1,15 @@
 body{
-	background-color: #4682B4;
+	background-color: #DCDCDC;
 }
 
 a{
 	color:black;
+}
+
+label{
+	font-size: 15px !important;
+	color: black;
+	font-weight: bold;
 }
 
 .cor-adjacente{
@@ -27,7 +33,7 @@ a{
 }
 
 .tabela-head{
-	background-color:#8B2323;
+	background-color:#A9A9A9;
 	font-size: 20px;
 }
 
@@ -36,14 +42,6 @@ a{
 	border:1px solid;
 }
 
-label{
-	font-size: 15px !important;
-	color: black;
-	font-weight: bold;
-}
 
-input[type=text]{
-	background-color: white;
-}
 
 

@@ -51,7 +51,6 @@ function PessoasController($http, $routeParams,$location){
 
 	vm.edita = function edita(form,id){
 		delete form._id;
-		console.log(form);
 		$http({
 			method: 'post',
 			data: form,

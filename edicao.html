@@ -1,44 +1,44 @@
 
 <h3 class="center-align">Edição de Pessoa</h3>
 
-<form>
+<form name="form" ng-submit="P.edita(P.dados[P.routeParams.id],P.dados[P.routeParams.id]._id)">
 	<div class="row">
 		<div class="col s12">
 			<label>Nome:</label>
-			<input type="text" name="nome" ng-model="P.dados[P.routeParams.id].nome" /> 
+			<input type="text" name="nome" ng-model="P.dados[P.routeParams.id].nome" required="" /> 
 		</div>
 	</div>
 	<div class="row">
 		<div class="col s4">
 			<label>Telefone:</label>
-			<input type="text" name="telefone" ng-model="P.dados[P.routeParams.id].telefone" />
+			<input type="text" name="telefone" ng-model="P.dados[P.routeParams.id].telefone" required="" />
 		</div>
 		<div class="col s8">
 			<label>Email:</label>
-			<input type="text" name="email" ng-model="P.dados[P.routeParams.id].email" />
+			<input type="text" name="email" ng-model="P.dados[P.routeParams.id].email" required="" />
 		</div>
 	</div>
 	<div class="row">
 		<div class="col s1">
 			<label>Idade:</label>
-			<input type="text" name="idade" ng-model="P.dados[P.routeParams.id].idade" />
+			<input type="number" name="idade" ng-model="P.dados[P.routeParams.id].idade" required="" />
 		</div>
 		<div class="col s5">
 			<label>Cidade:</label>
-			<input type="text" name="cidade" ng-model="P.dados[P.routeParams.id].cidade" />
+			<input type="text" name="cidade" ng-model="P.dados[P.routeParams.id].cidade" required="" />
 		</div>
 		<div class="col s3">
 			<label>Estado:</label>
-			<input type="text" name="estado" ng-model="P.dados[P.routeParams.id].estado" />
+			<input type="text" name="estado" ng-model="P.dados[P.routeParams.id].estado" required="" />
 		</div>
 		<div class="col s3">
 			<label>Pais:</label>
-			<input type="text" name="pais" ng-model="P.dados[P.routeParams.id].pais" />
+			<input type="text" name="pais" ng-model="P.dados[P.routeParams.id].pais" required="" />
 		</div>
 	</div>
 	<div class="row">
 		<div class="col s12 center-align">
-			<button class="btn blue" ng-click="P.edita(P.dados[P.routeParams.id],P.dados[P.routeParams.id]._id)"><i class="fa fa-download"></i> Atualizar</button>
+			<button class="btn blue" type="submit"><i class="fa fa-download"></i> Atualizar</button>
 			<a href="#/pessoas"><button class="btn red"><i class="fa fa-mail-reply"></i> Cancelar</button></a>
 		</div>
 	</div>
