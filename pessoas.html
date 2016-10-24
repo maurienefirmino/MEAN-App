@@ -1,21 +1,27 @@
 
-<h3 class="center-align">Pessoas Cadastradas</h3>
-<div class="right-align">
-	<a href="#/cadastro">
-		<button class="btn blue" title="Novo Registro"><i class="fa fa-plus"></i></button>
-	</a>
-</div>
+<h3 class="center-align negrito">PESSOAS CADASTRADAS</h3>
+
 <div class="row">
-	<div class="col s6">
-		<input type="search" ng-model="filtroPessoa" placeholder="Pesquisar">
+	<div class="col s1">
+		<h2><i class="fa fa-search"></i></h2>
+	</div>
+	<div class="col s8 campo-search">
+		<input type="search" ng-model="filtroPessoa" placeholder="Pesquisar" class="search">
+	</div>
+	<div class="col s3">
+		<div class="right-align botao-novo">
+			<a href="#/cadastro">
+				<button class="btn blue" title="Novo Registro"> Novo <i class="fa fa-plus"></i></button>
+			</a>
+		</div>
 	</div>
 </div>
-<table class="striped">
+<table>
 	<thead>
-		<tr>
-			<th>Nome</th>
-			<th>Email</th>
-			<th class="right-align">Opções</th>
+		<tr class="tabela-head">
+			<th>NOME</th>
+			<th>EMAIL</th>
+			<th class="right-center">OPÇÕES</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -26,11 +32,11 @@
 				</a>
 			</td>
 			<td>{{ d.email | uppercase }}</td>
-			<td class="right-align">
+			<td class="center-align">
 				<a href="#/pessoas/editar/{{$index}}">
 					<button class="btn" title="Editar Registro" ng-click=""><i class="fa fa-edit"></i></button>
 				</a>
-				<button class="btn" title="Excluir Registro" ng-click="P.deleta(d._id)"><i class="fa fa-close"></i></button>
+				<button class="btn red" title="Excluir Registro" ng-click="P.deleta(d._id)"><i class="fa fa-close"></i></button>
 			</td>
 		</tr>
 	</tbody>

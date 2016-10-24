@@ -1,0 +1,49 @@
+body{
+	background-color: #4682B4;
+}
+
+a{
+	color:black;
+}
+
+.cor-adjacente{
+	background-color: #B0C4DE;
+}
+
+.negrito{
+	font-weight: bold;
+}
+
+.campo-search{
+	margin-top:40px;
+}
+
+.search{
+	font-size:20px !important;
+}
+
+.botao-novo{
+	margin-top:50px;
+}
+
+.tabela-head{
+	background-color:#8B2323;
+	font-size: 20px;
+}
+
+.tabela-linha{
+	background-color:#B5B5B5;
+	border:1px solid;
+}
+
+label{
+	font-size: 15px !important;
+	color: black;
+	font-weight: bold;
+}
+
+input[type=text]{
+	background-color: white;
+}
+
+
